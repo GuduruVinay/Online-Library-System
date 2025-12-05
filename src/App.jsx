@@ -1,7 +1,13 @@
+import BookList from "./components/BookList";
+import { Books } from "./utils/mockData";
+
 function App() {
   return (
-    <h1>Online Library System</h1>
+    <main>
+      <h1>Online Library System</h1>
+      <BookList booksData={Books} />
+    </main>
   )
 }
 
-export default App
+export default App;
