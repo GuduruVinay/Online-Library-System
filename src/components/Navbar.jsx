@@ -21,6 +21,7 @@ function Navbar() {
                     </div>
                 </div>
             </nav>
+            {/* Outlet renders the matched child route component */}
             <main className="container p-4 mx-auto">
                 <Outlet />
             </main>

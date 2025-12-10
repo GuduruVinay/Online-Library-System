@@ -12,11 +12,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route index element={<HomePage />} />
+          {/* Dynamic Routing for Category */}
           <Route path="books" element={<BrowseBooksPage />}/>
           <Route path="books/:category" element={<BrowseBooksPage />}/>
+          {/* Dynamic Routing for Book Details */}
           <Route path="book/:bookId" element={<BookDetailsPage />} />
           <Route path="add" element={<AddBookPage />} />
         </Route>
+        {/* The 404 handler */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

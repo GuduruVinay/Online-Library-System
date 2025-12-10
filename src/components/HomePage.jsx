@@ -3,13 +3,16 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 function HomePage() {
+    // Get all books from Redux state
     const books = useSelector((state) => state.books.books);
 
+    // Derive unique categories
     const categories = useMemo(() => {
         const categorySet = new Set(books.map(book => book.category));
         return Array.from(categorySet);
     }, [books]);
 
+    // Select a list of popular books
     const popularBooks = useMemo(() => {
         const popularSet = new Set(books.filter(book => book.rating >= 4.5));
         return Array.from(popularSet);
@@ -17,6 +20,7 @@ function HomePage() {
 
     return (
         <div className="space-y-12">
+            {/* Welcome Message */}
             <div className="text-center p-8 bg-blue-50 rounded-lg shadow-md">
                 <h1 className="text-2xl md:text-4xl font-extrabold text-gray-800 mb-2">
                     Welcome to the Online Library System
@@ -25,6 +29,7 @@ function HomePage() {
                     Explore our diverse collection of books across various categories.
                 </p>
             </div>
+            {/* Book Categories */}
             <section>
                 <h2 className="text-xl md:text-3xl font-semibold text-gray-700 mb-6 border-b pb-2">
                     Book Categories
@@ -41,6 +46,7 @@ function HomePage() {
                     )}
                 </div>
             </section>
+            {/* Popular Books */}
             <section>
                 <h2 className="text-xl md:text-3xl font-semibold text-gray-700 mb-6 border-b pb-2">Popular Books</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -49,6 +55,7 @@ function HomePage() {
                             <h3 className="text-xl font-bold text-gray-900 truncate mb-1">{book.title}</h3>
                             <p className="text-sm text-gray-600 mb-3">by {book.author}</p>
                             <p className="text-sm text-blue-600 font-medium mb-4">{book.category}</p>
+                            {/* Link to view more details */}
                             <Link to={`/book/${book.id}`} className="inline-block bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition-colors">
                                 View Details
                             </Link>

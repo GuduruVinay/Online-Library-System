@@ -7,6 +7,7 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/* Wrap App with the Provider component */}
     <Provider store={store}>
       <App />
     </Provider>

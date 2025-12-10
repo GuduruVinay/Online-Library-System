@@ -12,10 +12,14 @@ const initialFormState = {
 };
 
 function AddBookPage() {
+    // Hooks for state management
+    // Form
     const [formData, setFormData] = useState(initialFormState);
+    // For validation errors
     const [errors, setErrors] = useState({});
-
+    // For updating Redux
     const dispatch = useDispatch();
+    // For redirection
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -23,6 +27,7 @@ function AddBookPage() {
         setFormData({ ...formData, [name]: value });
     }
 
+    // Validation Logic
     const validateForm = () => {
         const newErrors = {};
         if(!formData.title.trim()) newErrors.title = 'Title is required.';
@@ -30,6 +35,7 @@ function AddBookPage() {
         if(!formData.category.trim()) newErrors.category = "Category is required.";
         if(!formData.description.trim()) newErrors.description = "Description is required.";
 
+        // Rating must be a number between 1 and 5
         const ratingValue = parseFloat(formData.rating);
         if(isNaN(ratingValue) || ratingValue < 1 || ratingValue > 5) {
             newErrors.rating = "Rating must be a number between 1 and 5.";
@@ -42,11 +48,14 @@ function AddBookPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        // Run validation
         if(!validateForm()) {
             return;
         }
 
+        // Prepare the New Book Object
         const newBook = {
+            // Use timestamp for a simple unique ID
             id: Date.now().toString(),
             title: formData.title.trim(),
             author: formData.author.trim(),
@@ -55,8 +64,10 @@ function AddBookPage() {
             description: formData.description.trim(),
         }
 
+        // Dispatch the action to Redux
         dispatch(addBook(newBook));
 
+        // Redirection : Redirect the user to the Browse Books page
         navigate('/books');
     }
 
@@ -66,6 +77,7 @@ function AddBookPage() {
         <div className="max-w-xl mx-auto p-8 bg-white rounded-xl shadow-2xl">
             <h1 className="text-3xl font-bold text-gray-800 mb-6 border-b pb-3">Add New Book to Library</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Title Field */}
                 <div>
                     <label htmlFor="title" className="block text-sm font-medium text-gray-700">Title</label>
                     <input 
@@ -78,6 +90,7 @@ function AddBookPage() {
                     />
                     {errors.title && <p className="text-red-500 text-xs mt-1">{errors.title}</p>}
                 </div>
+                {/* Author Field */}
                 <div>
                     <label htmlFor="author" className="block text-sm font-medium text-gray-700">Author</label>
                     <input 
@@ -90,6 +103,7 @@ function AddBookPage() {
                     />
                     {errors.author && <p className="text-red-500 text-xs mt-1">{errors.author}</p>}
                 </div>
+                {/* Category Field */}
                 <div>
                     <label htmlFor="category" className="block text-sm font-medium text-gray-700">Category</label>
                     <input 
@@ -102,6 +116,7 @@ function AddBookPage() {
                     />
                     {errors.category && <p className="text-red-500 text-xs mt-1">{errors.category}</p>}
                 </div>
+                {/* Rating Field */}
                 <div>
                     <label htmlFor="rating" className="block text-sm font-medium text-gray-700">Rating (1.0 to 5.0)</label>
                     <input 
@@ -117,6 +132,7 @@ function AddBookPage() {
                     />
                     {errors.rating && <p className="text-red-500 text-xs mt-1">{errors.rating}</p>}
                 </div>
+                {/* Description Field */}
                 <div>
                     <label htmlFor="description" className="block text-sm font-medium text-gray-700">Description</label>
                     <textarea

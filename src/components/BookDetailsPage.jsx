@@ -2,9 +2,11 @@ import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 
 function BookDetailsPage() {
+    // Get the dynamic bookId from the URL
     const { bookId } = useParams();
     const navigate = useNavigate();
 
+    // Find the selected book from the Redux state
     const book = useSelector((state) => state.books.books.find((b) => b.id === bookId))
 
     if(!book) {
@@ -19,6 +21,7 @@ function BookDetailsPage() {
         )
     }
 
+    // Show detailed information
     return (
         <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-2xl space-y-6 flex flex-col justify-center">
             <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900 border-b pb-3">{book.title}</h1>
@@ -36,6 +39,7 @@ function BookDetailsPage() {
                         <span className="font-semibold text-gray-700">Rating :</span>
                         <span className="ml-2 text-yellow-500 font-bold">
                             {book.rating} / 5
+                            {/* Simple representation of stars based on rating */}
                             {'⭐'.repeat(Math.round(book.rating))}
                         </span>
                     </p>
@@ -45,6 +49,7 @@ function BookDetailsPage() {
                 <h2 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2">Description</h2>
                 <p className="text-gray-600 leading-relaxed">{book.description}</p>
             </div>
+            {/* Back to Browse Button */}
             <button onClick={() => navigate('/books')} className="m-auto md:mt-8 px-6 py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-700 transition-colors shandow-lg">
                 &larr; Back to Browse
             </button>
