@@ -36,35 +36,38 @@ You need to have **Node.js** and **npm** (Node Package Manager) installed on you
 ### Installation
 
 ### Clone the Repository
-    ```bash
-    git clone https://github.com/GuduruVinay/Online-Library-System.git
-    ```
+
+```bash
+git clone https://github.com/GuduruVinay/Online-Library-System.git
+```
+
 Or download the ZIP manually and extract it.
 
 ### Install Dependencies
 
 Open the project folder in your terminal :
 
-    ```bash
-    cd Online-Library-System
-    npm install
-    ```
+```bash
+cd Online-Library-System
+npm install
+```
 
 This installs React, Vite, Tailwind CSS, and required dependencies.
 
 ### Run the Development Server
 
-    ```bash
-    npm run dev
-    ```
+```bash
+npm run dev
+```
+
 Then open the local server link shown in the terminal, for example :
 
-    ```bash
-    http://localhost:5173/
-    ```
+```bash
+http://localhost:5173/
+```
 
 The Online Library System will now be running !
 
 ## GitHub Link
 
-[https://github.com/GuduruVinay/Online-Library-System]
+https://github.com/GuduruVinay/Online-Library-System
