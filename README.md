@@ -1,16 +1,70 @@
-# React + Vite
+# Online Library System (React + Vite + Tailwind CSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a single-page application (SPA) built using **React** to simulate a basic online library system. It demonstrates component-based architecture, client-side routing, advanced state management, and form validation.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application provides a fully functional interface for browsing, searching, viewing details, and adding new books.
 
-## React Compiler
+* **Vite Setup:** The project is bootstrapped using Vite, as required.
+* **Client-Side:** Utilizes `react-route-dom` for navigation, including dynamic routes and a 404 handler.
+* **Centralized State Management:** Uses **Redux Toolkit** to manage the global list of books.
+* **Search & Filtering:** Allows filtering books by dynamic URL category parameters and real-time search by title or author.
+* **Form Handling:** Implements a controlled form for adding new books, complete with client-side validation.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## UI & UX
 
-## Expanding the ESLint configuration
+* Fully responsive interface
+* Smooth transitions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+* **Framework:** React v18+
+* **Bundler:** Vite
+* **Routing:** React Router DOM
+* **State Management:** Redux Toolkit & React Redux
+* **Styling:** Tailwind CSS
+
+## Getting Started
+
+Follow these steps to set up and run the project locally.
+
+### Prerequisites
+
+You need to have **Node.js** and **npm** (Node Package Manager) installed on your machine.
+
+### Installation
+
+### Clone the Repository
+    ```bash
+    git clone https://github.com/GuduruVinay/Online-Library-System.git
+    ```
+Or download the ZIP manually and extract it.
+
+### Install Dependencies
+
+Open the project folder in your terminal :
+
+    ```bash
+    cd Online-Library-System
+    npm install
+    ```
+
+This installs React, Vite, Tailwind CSS, and required dependencies.
+
+### Run the Development Server
+
+    ```bash
+    npm run dev
+    ```
+Then open the local server link shown in the terminal, for example :
+
+    ```bash
+    http://localhost:5173/
+    ```
+
+The Online Library System will now be running !
+
+## GitHub Link
+
+[https://github.com/GuduruVinay/Online-Library-System]
