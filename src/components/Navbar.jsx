@@ -4,7 +4,7 @@ function Navbar() {
     return (
         <>
             <nav className="bg-gray-800 p-4 sticky top-0 z-10">
-                <div className="container mx-auto flex justify-between items-center">
+                <div className="container mx-auto flex flex-col md:flex-row gap-4 justify-between items-center">
                     <Link to="/" className="text-white text-2xl font-bold hover:text-blue-400 transition-colors">
                         Online Library
                     </Link>

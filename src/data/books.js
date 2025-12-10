@@ -4,9 +4,7 @@ export const initialBooks = [
     title: "The Silent Forest",
     author: "Aria Winters",
     category: "Fiction",
-    popular: true,
     rating: 4.4,
-    pages: 320,
     coverImage:
       "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg?auto=compress&cs=tinysrgb&w=400",
     description:
@@ -17,9 +15,7 @@ export const initialBooks = [
     title: "Understanding the Cosmos",
     author: "Dr. Neil Hawke",
     category: "Non-Fiction",
-    popular: true,
     rating: 4.8,
-    pages: 410,
     coverImage:
       "https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=400",
     description:
@@ -30,9 +26,7 @@ export const initialBooks = [
     title: "Stars Beyond Time",
     author: "Lena Cole",
     category: "Sci-Fi",
-    popular: false,
     rating: 4.2,
-    pages: 280,
     coverImage:
       "https://images.pexels.com/photos/110854/pexels-photo-110854.jpeg?auto=compress&cs=tinysrgb&w=400",
     description:
@@ -43,9 +37,7 @@ export const initialBooks = [
     title: "Mindful Living",
     author: "Sara Blake",
     category: "Non-Fiction",
-    popular: false,
     rating: 4.0,
-    pages: 200,
     coverImage:
       "https://images.pexels.com/photos/1557238/pexels-photo-1557238.jpeg?auto=compress&cs=tinysrgb&w=400",
     description:
@@ -56,9 +48,7 @@ export const initialBooks = [
     title: "City of Dreams",
     author: "Michael Grey",
     category: "Fiction",
-    popular: false,
     rating: 3.9,
-    pages: 350,
     coverImage:
       "https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&w=400",
     description:
@@ -69,9 +59,7 @@ export const initialBooks = [
     title: "The Quantum Paradox",
     author: "Dr. Li Chang",
     category: "Sci-Fi",
-    popular: false,
     rating: 4.7,
-    pages: 295,
     coverImage:
       "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=400",
     description:
@@ -82,9 +70,7 @@ export const initialBooks = [
     title: "History of Civilizations",
     author: "Anand Rao",
     category: "Non-Fiction",
-    popular: false,
     rating: 4.3,
-    pages: 500,
     coverImage:
       "https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=400",
     description:
@@ -95,9 +81,7 @@ export const initialBooks = [
     title: "Code of the Future",
     author: "Emily Torres",
     category: "Non-Fiction",
-    popular: true,
     rating: 4.6,
-    pages: 260,
     coverImage:
       "https://images.pexels.com/photos/2706379/pexels-photo-2706379.jpeg?auto=compress&cs=tinysrgb&w=400",
     description:
@@ -108,9 +92,7 @@ export const initialBooks = [
     title: "Galactic Outlaws",
     author: "R. K. Monroe",
     category: "Sci-Fi",
-    popular: false,
     rating: 3.8,
-    pages: 310,
     coverImage:
       "https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=400",
     description:
@@ -121,9 +103,7 @@ export const initialBooks = [
     title: "Whispers of the Sea",
     author: "Nora Lane",
     category: "Fiction",
-    popular: false,
     rating: 4.1,
-    pages: 230,
     coverImage:
       "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=400",
     description:

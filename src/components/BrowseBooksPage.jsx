@@ -29,7 +29,7 @@ function BrowseBooksPage() {
 
     return (
         <div className="space-y-8">
-            <h1 className="text-4xl font-extrabold text-gray-800">{headerText}</h1>
+            <h1 className="text-2xl md:text-4xl font-extrabold text-gray-800">{headerText}</h1>
             <div className="w-full">
                 <input 
                     type="text"

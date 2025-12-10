@@ -18,15 +18,15 @@ function HomePage() {
     return (
         <div className="space-y-12">
             <div className="text-center p-8 bg-blue-50 rounded-lg shadow-md">
-                <h1 className="text-4xl font-extrabold text-gray-800 mb-2">
+                <h1 className="text-2xl md:text-4xl font-extrabold text-gray-800 mb-2">
                     Welcome to the Online Library System
                 </h1>
-                <p className="text-xl text-gray-600">
+                <p className="text-lg md:text-xl text-gray-600">
                     Explore our diverse collection of books across various categories.
                 </p>
             </div>
             <section>
-                <h2 className="text-3xl font-semibold text-gray-700 mb-6 border-b pb-2">
+                <h2 className="text-xl md:text-3xl font-semibold text-gray-700 mb-6 border-b pb-2">
                     Book Categories
                 </h2>
                 <div className="flex flex-wrap gap-4">
@@ -42,7 +42,7 @@ function HomePage() {
                 </div>
             </section>
             <section>
-                <h2 className="text-3xl font-semibold text-gray-700 mb-6 border-b pb-2">Popular Books</h2>
+                <h2 className="text-xl md:text-3xl font-semibold text-gray-700 mb-6 border-b pb-2">Popular Books</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {popularBooks.map((book) => (
                         <div key={book.id} className="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
