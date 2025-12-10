@@ -10,7 +10,10 @@ function HomePage() {
         return Array.from(categorySet);
     }, [books]);
 
-    const popularBooks = books.slice(0, 3);
+    const popularBooks = useMemo(() => {
+        const popularSet = new Set(books.filter(book => book.rating >= 4.5));
+        return Array.from(popularSet);
+    }, [books])
 
     return (
         <div className="space-y-12">

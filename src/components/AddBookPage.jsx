@@ -51,8 +51,8 @@ function AddBookPage() {
             title: formData.title.trim(),
             author: formData.author.trim(),
             category: formData.category.trim(),
-            description: formData.description.trim(),
             rating: parseFloat(formData.rating),
+            description: formData.description.trim(),
         }
 
         dispatch(addBook(newBook));
